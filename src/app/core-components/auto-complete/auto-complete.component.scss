@@ -1,0 +1,37 @@
+.input-class {
+  border: 1px solid #BABABA;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.tag {
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  font-size: 10px;
+  line-height: 11px;
+  display: flex;
+  align-items: center;
+  color: #5F5F5F;
+}
+.styletext{
+  font-size: 15px;
+  line-height: 24px;
+}

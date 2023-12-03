@@ -1,0 +1,37 @@
+<div class="warp">
+  <div class="logo">
+    <svg width="91" height="91" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M40.6098 19.701L46.0117 16.5714C51.4108 19.701 66.6928 28.5485 72.0919 31.6752V43.114L77.4938 39.9873V28.5485L46.0117 10.3152L29.8059 19.701L61.2908 37.9343V49.3703L66.6927 46.2435C66.6955 46.2435 66.6927 35.5261 66.6927 34.8047L40.6098 19.701Z"
+            fill="#F05151"/>
+      <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M72.0919 55.6266V61.8828C66.69 65.0123 51.4108 73.8598 46.0117 76.9894L36.1372 71.2686V77.5248L46.0117 83.2428L77.4938 65.0123L77.4966 46.2436L46.0117 64.4741L36.1372 58.7561V65.0123C36.1344 65.0123 45.3893 70.3697 46.0117 70.7303L72.0919 55.6266Z"
+            fill="#ED1B35"/>
+      <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M25.3306 65.0123L19.9287 61.8856C19.9287 55.6294 19.9287 37.9343 19.9287 31.678L29.8032 25.9572L24.404 22.8305L14.5295 28.5485V65.0123L30.7353 74.3981V37.9315L40.6098 32.2135L35.2106 29.0895C35.2106 29.0868 25.9557 34.4469 25.3334 34.8076L25.3306 65.0123Z"
+            fill="#F26864"/>
+    </svg>
+  </div>
+  <div class="header_dashboard">META-ANGULAR</div>
+  <div class="d-flex justify-content-center align-items-center" style="margin-top: 10px">
+    <div class="text-header-search">Tìm kiếm trong:</div>
+    <nz-select [(ngModel)]="selectedValue" [nzSize]="'large'"
+               [nzPlaceHolder]="'Chọn lĩnh vực'"
+               [nzMenuItemSelectedIcon]="nzSuffixIcon"
+               [nzSuffixIcon]="nzSuffixIcon">
+      <nz-option *ngFor="let option of listOfOption" [nzLabel]="option.label" [nzValue]="option.value"></nz-option>
+    </nz-select>
+    <app-auto-complete style="margin-left: 5px"
+                       [placeholder]="'Tìm kiếm từ điển, thư mục, thuật ngữ'"
+                       [height]="'40px'"
+                       [width]="'600px'"
+    ></app-auto-complete>
+  </div>
+</div>
+
+<ng-template #nzSuffixIcon>
+  <i nz-icon nzType="caret-down" nzTheme="outline"></i>
+</ng-template>
+<ng-template #nzSuffixIcon>
+  <i nz-icon nzType="check" nzTheme="outline"></i>
+</ng-template>

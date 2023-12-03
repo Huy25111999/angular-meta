@@ -1,0 +1,47 @@
+.header {
+  height: 56px;
+  padding: 18px 20px 18px 20px;
+  border-radius: 6px 6px 0 0;
+}
+
+:host(.ant-modal-body) .ant-modal-body {
+  padding: unset !important;
+}
+
+.noPadding {
+  padding: unset;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.dialog-content {
+  padding: 20px 20px 20px 20px;
+}
+
+.content {
+  flex: 1;
+  margin-left: 25px !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #1E1E1E;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+  display: flex;
+  align-items: center;
+}
+
+.warningColor {
+  background: #FFE8C6;
+  color: #F29F24;
+}
+
+/*# sourceMappingURL=modal-confirm.component.css.map */

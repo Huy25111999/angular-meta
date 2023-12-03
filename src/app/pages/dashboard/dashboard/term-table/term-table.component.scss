@@ -1,0 +1,47 @@
+.content {
+  margin-top: 10px;
+}
+
+.header {
+  text-transform: uppercase;
+  color: #CA0230;
+  font-weight: bold;
+}
+
+.container_bg {
+  margin: 10px 30px 0;
+  padding-bottom: 20px;
+}
+
+.fastAccess {
+  padding-left: 30px;
+
+
+  .header_fastAccess {
+    height: 60px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #233B66;
+    border-bottom: 1px solid #D8D8D8;
+  }
+
+  .name-access {
+    font-weight: 500;
+    color: #303030;
+    margin: unset;
+    margin-left: 15px;
+    cursor: pointer;
+    &:hover{
+      color: red;
+    }
+  }
+}
+
+.borderStyle {
+  width: calc(100% - 360px);
+  height: 2px;
+  background: #CA0230;
+  margin-top: 25px;
+}

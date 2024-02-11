@@ -11,7 +11,7 @@
       </a>
 
       <div routerLink="/trang-chu" class="sidebar-logo-detail d-flex w-100" *ngIf="!isCollapsed" style="cursor: pointer">
-        <div class="title_1">{{'Angular tranning' | uppercase}}</div>
+        <div class="title_1">{{'inspol.onlineV2' | uppercase}}</div>
       </div>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
@@ -125,6 +125,16 @@
           </li>
         </ul>
       </li>
+      <li nz-menu-item nzMatchRouter class="hover-item" routerLink="/users">
+        <i nz-icon class="icon-list">
+          <svg width="24" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M7.67501 22.3393L2.34167 18.5298C1.52053 17.9433 1.10996 17.65 0.888291 17.2193C0.666626 16.7885 0.666626 16.284 0.666626 15.2749V8.72516C0.666626 8.40381 0.666626 8.13363 0.673784 7.9007L8.99996 13.848V23.2313C8.64321 23.0309 8.22695 22.7336 7.67501 22.3393ZM11 23.2313C11.3567 23.0309 11.773 22.7336 12.3249 22.3393L17.6582 18.5298C18.4794 17.9433 18.89 17.65 19.1116 17.2193C19.3333 16.7885 19.3333 16.284 19.3333 15.2749V8.72516C19.3333 8.40381 19.3333 8.13363 19.3261 7.9007L11 13.848V23.2313ZM18.4608 6.06095L9.99996 12.1044L1.53907 6.06095C1.75035 5.8926 2.01315 5.70488 2.34167 5.47022L7.67501 1.6607C8.79769 0.858783 9.35903 0.457825 9.99996 0.457825C10.6409 0.457825 11.2022 0.858783 12.3249 1.6607L17.6582 5.47022C17.9868 5.70488 18.2496 5.8926 18.4608 6.06095Z"
+                  fill="white"/>
+          </svg>
+        </i>
+        <span class="name-list" routerLink="/users">Quản lý người dùng</span>
+      </li>
     </ul>
   </nz-sider>
   <nz-layout>
@@ -133,7 +143,7 @@
         <div nz-dropdown class="float-end avatar" [nzDropdownMenu]="menu" nzPopoverPlacement="bottomLeft"
              nzTrigger="click">
           <nz-avatar [nzSize]="48" [nzSrc]="'/assets/img/img.png'"></nz-avatar>
-          <span class="avatar-name">Yennhi0502</span>
+          <span class="avatar-name">Admin0502</span>
         </div>
       </div>
     </nz-header>
@@ -167,6 +177,18 @@
   </i>
   <span class="name-list" routerLink="/quan-ly-doi-tuong">Thuật ngữ</span>
 </ng-template>
+
+<ng-template #users>
+  <i nz-icon class="icon-list">
+    <svg width="24" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M7.67501 22.3393L2.34167 18.5298C1.52053 17.9433 1.10996 17.65 0.888291 17.2193C0.666626 16.7885 0.666626 16.284 0.666626 15.2749V8.72516C0.666626 8.40381 0.666626 8.13363 0.673784 7.9007L8.99996 13.848V23.2313C8.64321 23.0309 8.22695 22.7336 7.67501 22.3393ZM11 23.2313C11.3567 23.0309 11.773 22.7336 12.3249 22.3393L17.6582 18.5298C18.4794 17.9433 18.89 17.65 19.1116 17.2193C19.3333 16.7885 19.3333 16.284 19.3333 15.2749V8.72516C19.3333 8.40381 19.3333 8.13363 19.3261 7.9007L11 13.848V23.2313ZM18.4608 6.06095L9.99996 12.1044L1.53907 6.06095C1.75035 5.8926 2.01315 5.70488 2.34167 5.47022L7.67501 1.6607C8.79769 0.858783 9.35903 0.457825 9.99996 0.457825C10.6409 0.457825 11.2022 0.858783 12.3249 1.6607L17.6582 5.47022C17.9868 5.70488 18.2496 5.8926 18.4608 6.06095Z"
+            fill="white"/>
+    </svg>
+  </i>
+  <span class="name-list" routerLink="/users">Users</span>
+</ng-template>
+
 
 <ng-template #att>
   <i nz-icon class="icon-list">

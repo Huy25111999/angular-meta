@@ -1,0 +1,53 @@
+
+
+<div class="wrapper">
+  <div class="container">
+    <h3>Thông tin tìm kiếm</h3>
+
+    <form nz-form [nzLayout]="'inline'" [formGroup]="formData">
+      <div nz-col [nzSpan]="8">
+        <nz-form-item>
+          <nz-form-label nzFor="agentType" class="text-left">Tên người dùng</nz-form-label>
+          <nz-form-control nzErrorTip="Please input your username!">
+            <input formControlName="userName" nz-input placeholder="Username" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+  
+      <div nz-col [nzSpan]="8">
+        <nz-form-item>
+          <nz-form-label nzFor="agentType" class="text-left">Số điện thoại</nz-form-label>
+          <nz-form-control nzErrorTip="Please input your Phone number!">
+            <input formControlName="phoneNumber" nz-input placeholder="Phone Number" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+
+      <div nz-col [nzSpan]="8">
+        <nz-form-item>
+          <nz-form-label nzFor="agentType" class="text-left">Trạng thái</nz-form-label>
+          <nz-form-control nzErrorTip="Please input your Phone number!">
+            <nz-select formControlName="status"
+            nzPlaceHolder="Trạng thái"
+            nzServerSearch
+            >
+                <nz-option *ngFor="let type of listStatus" [nzValue]="type.value"
+                    [nzLabel]="type.name"></nz-option>
+            </nz-select>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+
+      <div nz-col [nzSpan]="24" class="d-flex justify-content-center">
+        <button type="submit" class="btn-common d-flex align-items-center btn-hover ant-btn"
+                nz-button nzType="default" style="margin-top: 22px" 
+                [disabled]="!formData.valid" (click)="onSearch()">
+            <i nz-icon nzType="search" nzTheme="outline"></i>
+            <span>Tìm kiếm</span>
+        </button>
+    </div>
+    
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,62 @@
+.card-wiki {
+  position: relative;
+  height: 100%;
+  background: #F4F4F4;
+  cursor: pointer;
+}
+
+.header {
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+
+  color: #FFFFFF;
+  background: #233B66;
+  width: 100%;
+  margin: auto;
+  margin-left: 10px;
+}
+
+.content {
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: normal;
+  align-items: center;
+  color: #303030;
+  background: #F4F4F4;
+  padding: 15px
+;
+
+}
+
+.number-term {
+  cursor: pointer;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #CA0230;
+}
+
+.icon {
+  background: #3D5888;
+  height: 100%;
+  width: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.icon_after {
+  width: 0;
+  height: 0;
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+  border-left: 22px solid #3D5888;
+}
+
+.container-header {
+  height: 44px;
+  background: #233B66;
+}

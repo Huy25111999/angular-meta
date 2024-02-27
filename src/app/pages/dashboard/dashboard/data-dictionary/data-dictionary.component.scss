@@ -1,0 +1,118 @@
+.container_dictionary {
+  margin: 10px 30px 0;
+  padding-bottom: 20px;
+}
+
+.header {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #CA0230;
+}
+
+.label-data {
+  margin-left: 15px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.fastAccess {
+  padding-left: 30px;
+
+  .header_fastAccess {
+    height: 60px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #233B66;
+    border-bottom: 1px solid #D8D8D8;
+  }
+
+  .name-access {
+    font-weight: 500;
+    color: #303030;
+    margin: unset;
+    margin-left: 15px;
+    cursor: pointer;
+
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+.sub_title {
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.borderStyle {
+  width: calc(100% - 360px);
+  height: 2px;
+  background: #CA0230;
+  margin-top: 25px;
+}
+
+.container-header {
+  height: 44px;
+  background: #233B66;
+
+
+  .icon {
+    background: #3D5888;
+    height: 100%;
+    width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .icon_after {
+    width: 0;
+    height: 0;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+    border-left: 22px solid #3D5888;
+  }
+
+  .header {
+    text-transform: uppercase;
+    padding: 10px;
+    color: #FFFFFF;
+    background: #233B66;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.list-data {
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 15px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  background: #F4F4F4;
+
+  .data_title {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    color: #303030;
+    margin-left: 30px;
+  }
+}
+
+._card-content {
+  padding-right: 15px;
+}
+::ng-deep .ant-pagination-item-link .anticon-right {
+  vertical-align: 1px !important;
+}
+::ng-deep .ant-pagination-item-link .anticon-left {
+  vertical-align: 1px !important;
+}

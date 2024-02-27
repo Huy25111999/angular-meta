@@ -1,0 +1,15 @@
+
+export const ACTION_KEYS = {
+    ADD: 'ADD',
+    VIEW: 'VIEW',
+    DETAIL:'DETAIL',
+    EDIT: 'EDIT',
+    CLONE: 'CLONE',
+    DELETE: 'DELETE',
+    PREVIEW: 'PREVIEW',
+    SETTING: 'SETTING',
+    CONNECTION: 'CONNECTION',
+    UNCONNECTION: 'UNCONNECTION',
+    BLOCK: 'BLOCK',
+    UNBLOCK: 'UNBLOCK',
+  }

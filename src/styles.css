@@ -1,0 +1,39 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+.ant-layout-sider {
+  background: #1A2B49;
+}
+
+.ant-menu-sub, .ant-menu.ant-menu-dark .ant-menu-sub {
+  background: #1A2B49;
+}
+
+.ant-menu.ant-menu-dark, .ant-menu-dark .ant-menu-sub, .ant-menu.ant-menu-dark .ant-menu-sub {
+  background: #1A2B49;
+}
+
+a {
+  text-decoration: unset !important;
+}
+a:hover {
+  text-decoration: unset !important;
+}
+
+.noPadding {
+  padding: unset !important;
+}
+
+.truncate_data {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  max-height: 64px;
+  -webkit-line-clamp: 2;
+  word-break: break-word;
+  -webkit-box-orient: vertical;
+}
+
+.ant-modal-footer {
+  min-height: 54px !important;
+}
+
+/*# sourceMappingURL=styles.css.map */

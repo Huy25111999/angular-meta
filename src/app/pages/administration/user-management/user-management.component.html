@@ -1,0 +1,87 @@
+
+
+<div class="wrapper">
+  <div class="container">
+    <div class="mt-4">
+      <div class="card-body">
+        <h5>Thông tin tìm kiếm</h5>
+
+        <div class="form-search">
+          <form nz-form [nzLayout]="'inline'" [formGroup]="formData">
+              <div nz-col [nzSpan]="8">
+                <nz-form-item>
+                  <nz-form-label nzFor="agentType" class="text-left label-form">Tên người dùng</nz-form-label>
+                  <nz-form-control nzErrorTip="Please input your username!"class="block-control">
+                    <input formControlName="userName" nz-input placeholder="Username" />
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+
+              <div nz-col [nzSpan]="8">
+                <nz-form-item>
+                  <nz-form-label nzFor="agentType" class="text-left label-form">Số điện thoại</nz-form-label>
+                  <nz-form-control nzErrorTip="Please input your Phone number!">
+                    <input formControlName="phoneNumber" nz-input placeholder="Phone Number" />
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+
+              <div nz-col [nzSpan]="8">
+                <nz-form-item>
+                  <nz-form-label nzFor="agentType" class="text-left label-form">Trạng thái</nz-form-label>
+                  <nz-form-control nzErrorTip="Please input your Phone number!">
+                    <nz-select formControlName="status"
+                    nzPlaceHolder="Trạng thái"
+                    nzServerSearch
+                    >
+                        <nz-option *ngFor="let type of listStatus" [nzValue]="type.value"
+                            [nzLabel]="type.name"></nz-option>
+                    </nz-select>
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div nz-col [nzSpan]="24" class="d-flex justify-content-center">
+      <button type="submit" class="btn-common my-4 d-flex align-items-center btn-hover ant-btn"
+              nz-button nzType="default"
+              [disabled]="!formData.valid" (click)="onSearch()">
+          <i nz-icon nzType="search" nzTheme="outline"></i>
+          <span>Tìm kiếm</span>
+      </button>
+    </div>
+
+    <div class="">
+      <div class="card-body">
+        <h5>Kết quả tìm kiếm</h5>
+        <nz-table #basicTable [nzData]="listOfData">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Address</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of basicTable.data">
+              <td>{{ data.name }}</td>
+              <td>{{ data.age }}</td>
+              <td>{{ data.address }}</td>
+              <td>
+                <a>Action 一 {{ data.name }}</a>
+                <nz-divider nzType="vertical"></nz-divider>
+                <a>Delete</a>
+              </td>
+            </tr>
+          </tbody>
+        </nz-table>
+      </div>
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<div style="padding: 30px">
+  <div class="fw-bold" style="margin-bottom: 10px">AutoComplete</div>
+  <app-auto-complete></app-auto-complete>
+
+
+  <div class="fw-bold mt-4" style="margin-bottom: 10px">Card Wiki</div>
+  <app-card-wiki></app-card-wiki>
+  <button nz-button (click)="sort()">Sắp xếp</button>
+
+  <div class="mt-5">
+    <div class="float-end">
+      <nz-button-group>
+        <button nz-button style="margin-top: 20px" [nzType]="'primary'" (click)="createComponentModal()">Phê duyệt</button>
+        <button nz-button style="margin-top: 20px"  nzType="dashed" nzDanger (click)="noityfi()">Từ chối</button>
+        <button nz-button style="margin-top: 20px" [nzType]="'primary'"  nzDanger (click)="createComponentModal()">Hủy</button>
+      </nz-button-group>
+    </div>
+    <nz-table #colSpanTable [nzData]="listOfData" nzBordered>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Home phone</th>
+        <th>Home phone</th>
+        <th>Address</th>
+      </tr>
+      </thead>
+      <tbody>
+      <ng-container *ngFor="let data of colSpanTable.data; index as i">
+        <tr *ngFor="let list of data; index as l">
+          <td *ngIf="l === 0" rowspan="2">{{ list.name }}</td>
+          <td>{{ list.age }}</td>
+          <td>{{ list.tel }}</td>
+          <td>{{ list.phone }}</td>
+          <td>{{ list.address }}</td>
+        </tr>
+      </ng-container>
+
+      </tbody>
+    </nz-table>
+  </div>
+
+</div>
+

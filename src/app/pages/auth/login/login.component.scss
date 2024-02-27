@@ -1,0 +1,19 @@
+
+.container {
+  margin: 0;
+  padding: 0 32px;
+}
+
+.form-search nz-form-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-search{
+  ::ng-deep{
+    .label-form > label{
+      float: left;
+    }
+  }
+}
+

@@ -1,0 +1,34 @@
+.container_property {
+  margin: 10px 30px 0;
+}
+
+.header {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #CA0230;
+}
+
+.label-data {
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  color: #303030;
+  cursor: pointer;
+  margin-left: 30px;
+  margin: unset;
+  margin-left: 10px;
+
+  &:hover {
+    color: red;
+  }
+}
+
+.borderStyle {
+  width: calc(100% - 260px);
+  height: 2px;
+  background: #CA0230;
+  margin-top: 25px;
+}
+
+.data-container {
+}

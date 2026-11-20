@@ -23,6 +23,8 @@ import {NzTypographyModule} from "ng-zorro-antd/typography";
 import {NzNotificationService} from "ng-zorro-antd/notification";
 import {SharedModule} from "./shared/shared.module";
 import { AntModule } from './shared/utilities/ant.modules';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 registerLocaleData(en);
 const PROVIDERS = [NzModalService, ModalService, NzNotificationService]
@@ -45,7 +47,9 @@ const PROVIDERS = [NzModalService, ModalService, NzNotificationService]
       NzDropDownModule,
       NzTypographyModule,
       SharedModule,
-      AntModule
+      AntModule,
+      StoreModule.forRoot({}),
+      EffectsModule.forRoot([])
     ],
   providers: [{provide: NZ_I18N, useValue: en_US}, ...PROVIDERS],
   bootstrap: [AppComponent]

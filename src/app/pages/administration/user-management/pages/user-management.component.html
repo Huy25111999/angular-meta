@@ -1,14 +1,14 @@
 
 
 <div class="wrapper">
-  <div class="container">
+  <div class="dashboard_container ms-4 me-4">
     <div class="mt-4">
       <div class="card-body">
         <h5>Thông tin tìm kiếm</h5>
 
         <div class="form-search">
           <form nz-form [nzLayout]="'inline'" [formGroup]="formData">
-              <div nz-col [nzSpan]="8">
+              <div nz-col [nzSpan]="6">
                 <nz-form-item>
                   <nz-form-label nzFor="agentType" class="text-left label-form">Tên người dùng</nz-form-label>
                   <nz-form-control nzErrorTip="Please input your username!"class="block-control">
@@ -17,7 +17,7 @@
                 </nz-form-item>
               </div>
 
-              <div nz-col [nzSpan]="8">
+              <div nz-col [nzSpan]="6">
                 <nz-form-item>
                   <nz-form-label nzFor="agentType" class="text-left label-form">Số điện thoại</nz-form-label>
                   <nz-form-control nzErrorTip="Please input your Phone number!">
@@ -26,7 +26,7 @@
                 </nz-form-item>
               </div>
 
-              <div nz-col [nzSpan]="8">
+              <div nz-col [nzSpan]="6">
                 <nz-form-item>
                   <nz-form-label nzFor="agentType" class="text-left label-form">Trạng thái</nz-form-label>
                   <nz-form-control nzErrorTip="Please input your Phone number!">
@@ -39,6 +39,15 @@
                     </nz-select>
                   </nz-form-control>
                 </nz-form-item>
+              </div>
+
+              <div nz-col [nzSpan]="6">
+              <nz-form-item>
+                <nz-form-label nzFor="agentType" class="text-left label-form">Role</nz-form-label>
+                 <nz-form-control nzErrorTip="Please input your Phone number!">
+                    <input formControlName="role" nz-input placeholder="Nhập Role" />
+                  </nz-form-control>
+              </nz-form-item>
               </div>
           </form>
         </div>
@@ -57,28 +66,44 @@
     <div class="">
       <div class="card-body">
         <h5>Kết quả tìm kiếm</h5>
-        <nz-table #basicTable [nzData]="listOfData">
+        <nz-table #basicTable   [nzShowPagination]="false"
+            [nzData]="listUser">
           <thead>
             <tr>
+              <th>No</th>
               <th>Name</th>
-              <th>Age</th>
-              <th>Address</th>
+              <th>Username</th>
+              <th>email</th>
+              <th>Phone</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let data of basicTable.data">
-              <td>{{ data.name }}</td>
-              <td>{{ data.age }}</td>
-              <td>{{ data.address }}</td>
+            <tr *ngFor="let data of basicTable.data; let i = index">
+              <td>{{ (pageIndex - 1) * pageSize + i + 1 }}</td>
+              <td>{{ data.first_name }}</td>
+              <td>{{ data.last_name }}</td>
+              <td>{{ data.email }}</td>
+              <td>{{ data.avatar }}</td>
               <td>
-                <a>Action 一 {{ data.name }}</a>
-                <nz-divider nzType="vertical"></nz-divider>
-                <a>Delete</a>
+                  <button nz-button [nzType]="'primary'" >Detail</button>
+                  <button nz-button  nzType="dashed" nzDanger>Edit</button>
+                  <button nz-button [nzType]="'primary'"  nzDanger>Delete</button>
               </td>
             </tr>
           </tbody>
         </nz-table>
+        <div class="d-flex justify-content-end mt-4">
+            <vt-pagination
+              [pageIndex]="pageIndex"
+              [pageSize]="pageSize"
+              [total]="total"
+              [pageSizeOptions]="[6, 12, 18, 24]"
+              (pageIndexChange)="onPageIndexChange($event)"
+              (pageSizeChange)="onPageSizeChange($event)">
+            </vt-pagination>
+        </div>
+
       </div>
 
     </div>

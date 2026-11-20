@@ -30,23 +30,24 @@ export class PaginationComponent implements  OnChanges {
   constructor() {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['pageIndex']?.currentValue || changes['pageSize']?.currentValue) {
-      this.calculatorNumberShowRecord()
-    }
-    if (changes['total'] && changes['total'].currentValue) {
-      this.calculatorNumberShowRecord()
-    }
+    this.calculatorNumberShowRecord()
   }
 
 
   onPageIndexChange(event: any): void {
+    if (event === this.pageIndex) {
+      return;
+    }
+    this.pageIndex = event
     this.pageIndexChange.emit(event)
-    this.calculatorNumberShowRecord()
   }
 
   onPageSizeChange(event: any): void {
+    if (event === this.pageSize) {
+      return;
+    }
+    this.pageSize = event
     this.pageSizeChange.emit(event)
-    this.calculatorNumberShowRecord()
   }
 
   calculatorNumberShowRecord(): void {

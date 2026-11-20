@@ -7,6 +7,7 @@ const routes: Routes = [
   {path: 'trang-chu', loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardModule)},
   {path: 'admin', loadChildren: () => import('./pages/administration/administration.module').then(m => m.AdministrationModule)},
   {path: 'account', loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule)},
+  {path: 'users', loadChildren: () => import('./pages/administration/administration.module').then(m => m.AdministrationModule)},
 ];
 
 @NgModule({

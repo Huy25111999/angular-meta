@@ -9,8 +9,13 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 
 
 import { AdministrationRoutingModule } from './administration-routing.module';
-import { UserManagementComponent } from './user-management/user-management.component';
+import { UserManagementComponent } from './user-management/pages/user-management.component';
 import { AntModule } from 'src/app/shared/utilities/ant.modules';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { userFeatureKey, userReducer } from './user-management/states/users-management.reduces';
+import { UsersManagementEffects } from './user-management/states/users-management.effects';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -25,7 +30,10 @@ import { AntModule } from 'src/app/shared/utilities/ant.modules';
     NzFormModule,
     NzInputModule,
     NzIconModule,
-    NzSelectModule
+    NzSelectModule,
+    SharedModule,
+    StoreModule.forFeature(userFeatureKey, userReducer),
+    EffectsModule.forFeature([UsersManagementEffects])
   ]
 })
 export class AdministrationModule { }
